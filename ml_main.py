@@ -25,7 +25,16 @@ from sklearn.neighbors import RadiusNeighborsRegressor, KNeighborsRegressor
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeRegressor
+from sklearn.datasets import make_regression
 
+
+########################################################################################################################
+# Random Data Generator
+########################################################################################################################
+
+X,y = make_regression(n_samples=100, n_features=1, random_state=1)
+df_data = pd.DataFrame(data = {'col1':X, 'col2':y}, columns = ['X','y'])
+df_data.to_csv(r'./dataset/sample_data.csv', index=False)
 
 ########################################################################################################################
 # Data Splitting
