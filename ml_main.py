@@ -33,7 +33,7 @@ from sklearn.datasets import make_regression
 ########################################################################################################################
 
 X,y = make_regression(n_samples=100, n_features=1, random_state=1)
-df_data = pd.DataFrame(data = {'col1':X, 'col2':y}, columns = ['X','y'])
+df_data = pd.DataFrame(data = {X, y}, columns = ['X','y'])
 df_data.to_csv(r'./dataset/sample_data.csv', index=False)
 
 ########################################################################################################################
